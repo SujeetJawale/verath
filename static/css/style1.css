@@ -1,0 +1,326 @@
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: "freight Big Pro";
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+
+
+#main {
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#loader {
+    height: 100vh;
+    width: 100vw;
+    background-color: black;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    z-index: 11;
+}
+
+#yellow1 {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-color: #f5e41b;
+    z-index: 8;
+}
+
+#yellow2 {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-color: #f5e41b;
+    z-index: 7;
+}
+
+#loader>h1 {
+    color: white;
+    font-size: 6vw;
+    font-weight: 100;
+    line-height: 5vw;
+    letter-spacing: -3px;
+    position: relative;
+    z-index: 9;
+}
+
+#loader>video {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    object-fit: cover;
+    z-index: 6;
+}
+
+#nav {
+    position: absolute;
+    width: 100%;
+    height: 14vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 5%;
+    padding-right: 5%;
+    z-index: 10;
+}
+
+#nav h1 {
+    color: #000;
+    text-transform: capitalize;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    border: 1px solid black;
+    padding: 8px;
+    font-size: 3vh;
+}
+
+#nav button {
+    padding: 13px 22px;
+    color: #f5e41b;
+    background-color: black;
+    border-radius: 50px;
+    border: none;
+    text-transform: uppercase;
+    font-size: 2vh;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#nav button:hover {
+    background-color: #2e2e2d;
+}
+
+#nav-right {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#nav-right a {
+    padding: 5px 5px;
+    margin-right: 4vw;
+    text-decoration: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #000;
+    padding-bottom: 0px;
+    border-bottom: 1px solid #f5e41b;
+}
+
+#nav-right a:hover {
+    border-bottom: 1px solid black;
+}
+
+#page1 {
+    height: 100vh;
+    width: 100vw;
+    background-color: #f5e41b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#page1>h1 {
+    font-size: 6vw;
+    font-weight: 100;
+    line-height: 5vw;
+    letter-spacing: -3px;
+}
+
+#moving-div {
+    /* background-color: red; */
+    margin-top: 10vh;
+    position: absolute;
+    bottom: 8%;
+    white-space: nowrap;
+    padding: 1.2vw;
+    overflow: hidden;
+    width: 44%;
+}
+
+#moving-div .move {
+    display: inline-block;
+    animation-name: mobe;
+    animation-duration: 9s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+#moving-div .move h1 {
+    display: inline-table;
+    text-transform: uppercase;
+    height: 0.5vh;
+    margin: 0 1.2vw;
+    font-family: serif;
+    font-size: 3vh;
+}
+
+@keyframes mobe {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+#blur-left {
+    height: 100%;
+    width: 20%;
+    background: linear-gradient(to right, #f5e41b, transparent);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+
+#blur-right {
+    height: 100%;
+    width: 20%;
+    background: linear-gradient(to right, transparent, #f5e41b);
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 2;
+}
+
+/* ------------------------------------------------------------------------------------------------- */
+
+#main2 {
+    background-color: #f5e41b;
+    height: 105vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: white;
+    z-index: 2;
+}
+
+.container {
+    width: 1000px;
+    height: 680px;
+    background-color: black;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.6);
+    margin-top: 60px;
+    position: relative;
+}
+
+#main2 h1,
+h2 {
+    text-align: center;
+    text-transform: capitalize;
+    margin: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 4vh;
+    letter-spacing: 2px;
+    border: 1px solid #f5e41b;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: #f5e41b;
+    color: black;
+
+}
+
+#row2 {
+    display: flex;
+}
+
+#blogForm h3 {
+    padding: 5px 0px 0px 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 500;
+    font-size: 2.2vh;
+    text-transform: capitalize;
+    color: #f5e41b;
+}
+
+#row1 {
+    display: flex;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+#title {
+    width: 60vw;
+    margin-left: 20px;
+    margin-bottom: 10px;
+    margin-right: 20px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+#author,
+#hashtags {
+    width: 30vw;
+    /* Set a different width for other inputs */
+    margin-left: 20px;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-right: 20px;
+}
+
+textarea {
+    width: 60vw;
+    height: 46vh;
+    margin-left: 20px;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+#main2 button {
+    width: 14vw;
+    font-size: 3vh;
+    padding: 10px;
+    background-color: #f5e41b;
+    color: Black;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-left: 380px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-transform: uppercase;
+}
+
+#main2 button:hover {
+    background-color: #847a10;
+}
+
+#blogs {
+    margin-top: 20px;
+}
+
+.blog {
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: black;
+    border: 1px solid #ddd;
+}
+
+/* ----------------------------------------------------------------------------------------- */
